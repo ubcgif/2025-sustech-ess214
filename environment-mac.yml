@@ -1,0 +1,18 @@
+name: 2025-sustech-simpeg
+
+channels:
+  - conda-forge
+
+dependencies:
+  - python=3.11
+  - numpy>=1.22
+  - scipy>=1.8
+  - matplotlib
+  - jupyter
+  - ipywidgets
+  - pymatsolver>=0.3
+  # - pydiso
+  - python-mumps
+  - pytest
+  - discretize>=0.11
+  - simpeg=0.23.0

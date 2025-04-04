@@ -1,4 +1,4 @@
-name: TestingInConda
+name: Test with conda
 
 on:
   push:
@@ -15,24 +15,23 @@ jobs:
       fail-fast: false
       matrix:
         os: ["ubuntu-latest"]
-        python-version: [3.11]
+        python-version: ["3.11"]
 
     steps:
-    - uses: actions/checkout@v4
-      with:
-          fetch-depth: 0
-
+    - uses: actions/checkout@v2
     - name: Setup Conda
-      uses: conda-incubator/setup-miniconda@v3
+      uses: mamba-org/setup-micromamba@v1
       with:
-        auto-update-conda: true
-        activate-environment: 2025-sustech-simpeg
-        channels: conda-forge
         environment-file: environment.yml
-        python-version: ${{ matrix.python-version }}
-
+        init-shell: >-
+          bash
+          powershell
+        create-args: >-
+          python=${{ matrix.python-version }}
+        cache-environment: true
+        post-cleanup: 'all'
     - name: Run Tests
-      shell: bash
+      shell: micromamba-shell {0}
       run: |
         pip install testipynb
-        pytest .
+        pytest . -v
