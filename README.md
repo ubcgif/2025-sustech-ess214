@@ -19,7 +19,7 @@ There are a few things you'll need to use this app on your own computer:
 3. A web browser that works with Jupyter
    (basically anything except Internet Explorer)
 
-Alternatively, you can run this notebook on the cloud with binder: https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubcgif/2025-sustech-ess214/main
+Alternatively, you can run this notebook on the cloud with binder: https://mybinder.org/v2/gh/ubcgif/2025-sustech-ess214/main
 
 **Windows users:** If you are using Anaconda, when you see "*terminal*" in the instructions,
 this means the "*Anaconda Prompt*" program for you.
