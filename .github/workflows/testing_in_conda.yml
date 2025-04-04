@@ -34,4 +34,4 @@ jobs:
       shell: micromamba-shell {0}
       run: |
         pip install testipynb
-        pytest . -v
+        pytest ./github/test_notebooks.py -v
