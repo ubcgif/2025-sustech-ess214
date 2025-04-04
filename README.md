@@ -7,19 +7,21 @@
 
 ## Summary
 
-This notebook "app" is designed to let users explore the fundamental physics of DC resisivity.
+This notebook "app" is designed to let users explore the fundamental physics of DC resistivity.
 
 
 ## Setup
 
-There are a few things you'll need to use this app:
+There are a few things you'll need to use this app on your own computer:
 
 1. A working Python installation. I recommend using [Miniforge](https://github.com/conda-forge/miniforge), but you can also use [Anaconda](https://www.anaconda.com/download)
 2. To install the [conda environment](./environment.yml)
 3. A web browser that works with Jupyter
    (basically anything except Internet Explorer)
 
-**Windows users:** If you ar using Anaconda, when you see "*terminal*" in the instructions,
+Alternatively, you can run this notebook on the cloud with binder: https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ubcgif/2025-sustech-ess214/main
+
+**Windows users:** If you are using Anaconda, when you see "*terminal*" in the instructions,
 this means the "*Anaconda Prompt*" program for you.
 
 ### Step 1: Python
@@ -33,7 +35,7 @@ and [Linux](https://youtu.be/3ncwbHyZeAg)
 This will get you a working Python 3 installation with the `conda` package
 manager. If you already have one, you can skip this step.
 
-### Step 2: Download the SimPEG tutorials
+### Step 2: Download the notebook and code
 
 To access the notebooks, there are 3 options (in order of preference):
 1. You can download a zip file containing https://github.com/ubcgif/2025-sustech-ess214/archive/refs/heads/main.zip.
@@ -43,7 +45,7 @@ If you download the zip file, unzip it, and then open up a terminal in the `2025
 
 ### Step 3: Create the conda environment
 
-With an open terminal in the `2025-sustech-ess214` directory, create the `2025-sustech-simpeg` conda environment using the following. If you have a recent Mac, with an M1 or M2 chip, replace `environment.yml` with `environment-mac.yml`:
+With an open terminal in the `2025-sustech-ess214` directory, create the `2025-sustech-simpeg` conda environment using the following. If you have a recent Mac with an M1 or M2 chip replace `environment.yml` with `environment-mac.yml`:
 ```
 conda env create -f environment.yml
 ```
@@ -58,7 +60,7 @@ Once you have activated the conda environment, you can launch the notebooks
 ```
 jupyter lab
 ```
-Jupyter will then launch in your web-browser.
+Jupyter will then launch in your web browser.
 
 ## Resources
 
