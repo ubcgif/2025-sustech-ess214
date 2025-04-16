@@ -16,3 +16,4 @@ dependencies:
   - pytest
   - discretize>=0.11
   - simpeg=0.23.0
+  - scooby
