@@ -657,35 +657,35 @@ def PLOT(
             uPrim = primary_field[src, "charge"]
             u = uTotal - uPrim
 
-    elif Field == "Sensitivity":
+    # elif Field == "Sensitivity":
 
-        label = "Sensitivity"
-        xtype = "CC"
-        view = "real"
-        streamOpts = None
-        ind = indcC
+    #     label = "Sensitivity"
+    #     xtype = "CC"
+    #     view = "real"
+    #     streamOpts = None
+    #     ind = indcC
 
-        pcolorOpts = {"cmap": "viridis"}
-        if Scale == "Log":
-            linthresh = 1e-4
-            pcolorOpts = {
-                "norm": matplotlib.colors.SymLogNorm(linthresh=linthresh, linscale=0.2),
-                "cmap": "viridis",
-            }
-        # formatter = formatter = "$10^{%.1f}$"
-        formatter = "%.1e"
+    #     pcolorOpts = {"cmap": "viridis"}
+    #     if Scale == "Log":
+    #         linthresh = 1e-4
+    #         pcolorOpts = {
+    #             "norm": matplotlib.colors.SymLogNorm(linthresh=linthresh, linscale=0.2),
+    #             "cmap": "viridis",
+    #         }
+    #     # formatter = formatter = "$10^{%.1f}$"
+    #     formatter = "%.1e"
 
-        if Type == "Total":
-            u = getSensitivity(survey, A, B, M, N, mtrue)
+    #     if Type == "Total":
+    #         u = getSensitivity(survey, A, B, M, N, mtrue)
 
-        elif Type == "Primary":
-            u = getSensitivity(survey, A, B, M, N, mhalf)
+    #     elif Type == "Primary":
+    #         u = getSensitivity(survey, A, B, M, N, mhalf)
 
-        elif Type == "Secondary":
-            uTotal = getSensitivity(survey, A, B, M, N, mtrue)
-            uPrim = getSensitivity(survey, A, B, M, N, mhalf)
-            u = uTotal - uPrim
-        # u = np.log10(abs(u))
+    #     elif Type == "Secondary":
+    #         uTotal = getSensitivity(survey, A, B, M, N, mtrue)
+    #         uPrim = getSensitivity(survey, A, B, M, N, mhalf)
+    #         u = uTotal - uPrim
+    #     # u = np.log10(abs(u))
 
     if Scale == "Log":
         eps = 1e-16
@@ -947,7 +947,7 @@ def ResLayerApp():
             min=-30.5, max=30.5, step=cs, value=10.5, continuous_update=False
         ),
         Field=ToggleButtons(
-            options=["Model", "Potential", "E", "J", "Charge", "Sensitivity"],
+            options=["Model", "Potential", "E", "J", "Charge"],
             value="Model",
         ),
         Type=ToggleButtons(options=["Total", "Primary", "Secondary"], value="Total"),
